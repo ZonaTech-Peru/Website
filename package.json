@@ -1,0 +1,28 @@
+{
+  "name": "zonatechweb",
+  "version": "1.0.0",
+  "description": "Maquetación ZonaTech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZonaTech-Peru/Website.git"
+  },
+  "keywords": [
+    "zonatech",
+    "tailwind",
+    "html"
+  ],
+  "author": "edson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZonaTech-Peru/Website/issues"
+  },
+  "homepage": "https://github.com/ZonaTech-Peru/Website#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

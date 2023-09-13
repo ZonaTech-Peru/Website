@@ -89,9 +89,6 @@ const SectionEvents: React.FC = () => {
                         </div>
                     </article>                   
                 </div>
-                <a className="btn btn-solid" href="/eventos">
-                    Ver todos
-                </a>
             </div>
         </section>
   )

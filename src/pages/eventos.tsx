@@ -6,8 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 //Section
-import SectionAbout from "../components/section-about";
-import SectionEvents from "../components/section-events";
+import SectionEvents from "../components/events";
 
 
 const Eventos: React.FC<PageProps> = () => {

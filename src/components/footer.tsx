@@ -8,7 +8,8 @@ import Linkendin from "../images/svg/linkedin.svg";
 import Facebook from "../images/svg/facebook.svg";
 import Youtube from "../images/svg/youtube.svg";
 import Twitch from "../images/svg/twitch.svg";
-import Twitter from "../images/svg/twitter.svg";
+import Tiktok from "../images/svg/twitter.svg";
+import Twitter from "../images/svg/tiktok.svg";
 
 
 const Footer: React.FC = () => {
@@ -20,10 +21,10 @@ const Footer: React.FC = () => {
                     <p className="title">Sobre nosotros</p>
                     <ul className="footer-about--list">
                         <li>
-                            <a href="#">Nuestra comunidad</a>
+                            <a href="https://discord.gg/rgGqrCG7ST">Nuestra comunidad</a>
                         </li>
                         <li>
-                            <a href="#">Nuestros eventos</a>
+                            <a href="/eventos">Nuestros eventos</a>
                         </li>
                         <li>
                             <a href="#">Código de conducta</a>
@@ -34,32 +35,37 @@ const Footer: React.FC = () => {
                     <p className="title">Encuéntranos en</p>
                     <ul className="footer__list-social">
                         <li className="footer--item__social">
-                            <a href="#">
+                            <a href="https://www.tiktok.com/@zonatechorgpe">
+                                <Tiktok/>
+                            </a>
+                        </li>
+                        <li className="footer--item__social">
+                            <a href="https://www.instagram.com/zonatechorgpe/">
                                 <Instragram/>
                             </a>
                         </li>
                         <li className="footer--item__social">
-                            <a href="#">
+                            <a href="https://www.linkedin.com/company/zonatechorgpe/">
                                 <Linkendin/>
                             </a>
                         </li>
                         <li className="footer--item__social">
-                            <a href="#">
-                                <Facebook/>
-                            </a>
-                        </li>
-                        <li className="footer--item__social">
-                            <a href="#">
+                            <a href="https://www.youtube.com/@zonatechorgpe">
                                 <Youtube/>
                             </a>
                         </li>
                         <li className="footer--item__social">
-                            <a href="#">
+                            <a href="https://www.facebook.com/zonatechorgpe">
+                                <Facebook/>
+                            </a>
+                        </li>
+                        <li className="footer--item__social">
+                            <a href="https://www.twitch.tv/zonatechorgpe">
                                 <Twitch/>
                             </a>
                         </li>
                         <li className="footer--item__social">
-                            <a href="#">
+                            <a href="https://twitter.com/zonatechorgpe">
                                 <Twitter/>
                             </a>
                         </li>

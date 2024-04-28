@@ -7,6 +7,7 @@ import Footer from "./../components/footer";
 
 //Section
 import SectionBannerIndex from "./../components/section-bannerIndex";
+import SectionEvents from "../components/section-events";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -14,6 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main className="main" >
       <Header shape={true} />
       <SectionBannerIndex/>
+      <SectionEvents queryType="byDate" date="2024/01/29" />
       <Footer/>
     </main>
   )

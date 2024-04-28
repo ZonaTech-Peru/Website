@@ -15,8 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main className="main" >
       <Header shape={true} />
       <SectionBannerIndex/>
-      <SectionEvents/>
-      <SectionAbout/>
+      <SectionEvents queryType="byDate" date="2024/01/29" />
       <Footer/>
     </main>
   )

@@ -47,10 +47,6 @@ const SectionEvents: React.FC= ({ queryType, date }: SectionEventsProps) => {
           const response = await fetch(apiUrl);
           const data = await response.json();
           setEvents(data);
-          console.log(apiUrl);
-          
-          console.log(data);
-          
         } catch (error) {
           console.error('Error al obtener eventos:', error);
         }
@@ -67,7 +63,9 @@ const SectionEvents: React.FC= ({ queryType, date }: SectionEventsProps) => {
             <p>Conecta y comparte con la comunidad en</p>
           </div>
           <div className="events--cards">
-            {events.map((event: any) => (
+            {events.length === 0 
+            ? (<p>No hay eventos próximos.</p>)
+            : (events.map((event: any) => (
               <article key={event.id} className="card">
                 <div className="card__content">
                   <div className="card__header">
@@ -110,11 +108,9 @@ const SectionEvents: React.FC= ({ queryType, date }: SectionEventsProps) => {
                   </div>
                 </div>
               </article>
-            ))}
+            )))}
           </div>
-          <a className="btn btn-solid" href="#">
-            Ver todos
-          </a>
+          {queryType !== "all" && <a className="btn btn-solid" href="/eventos">Ver todos</a>}
         </div>
       </section>
     );

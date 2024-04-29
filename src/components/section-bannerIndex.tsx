@@ -12,7 +12,7 @@ const SectionBannerIndex: React.FC = () => {
                 <span>Compartimos</span>  en comunidad
             </h1>
             <p>Aprende y conecta con otros apasionados por la tecnología</p>
-            <a className="btn btn-ghost items-center" href="#events">Conoce nuestros eventos 
+            <a className="btn btn-ghost items-center" href="#about">Conoce lo que hacemos 
                 <ArrowDown/>
             </a>
         </div>

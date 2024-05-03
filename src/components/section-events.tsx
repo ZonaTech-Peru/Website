@@ -60,7 +60,7 @@ const SectionEvents: React.FC= ({ queryType, date }: SectionEventsProps) => {
         <div className="content content--events">
           <div className="text--content">
             <h1 className="title">Próximos eventos</h1>
-            <p>Conecta y comparte con la comunidad en</p>
+            <p>Conecta y comparte con la comunidad</p>
           </div>
           <div className="events--cards">
             {events.length === 0 

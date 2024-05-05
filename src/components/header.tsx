@@ -16,10 +16,11 @@ export const Header: React.FC<propsHeader>  = ({shape = false, background= false
 
   return (
     <header>
-            <nav className={background? `navigation standar`: `navigation`}>
                 {
-                    // shape ? <div className="shape"></div>: ""
+                    shape ? <div className="shape"></div> : "" 
                 }
+            <nav className={background? `navigation standar`: `navigation`}>
+               
                 <Link className="navigation-logo" to="/">
                     <Logo className="object-contain h-full w-56"/>
                 </Link>

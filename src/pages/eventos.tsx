@@ -21,7 +21,7 @@ const Eventos: React.FC<PageProps> = () => {
   return (
     <main className="main" >
       <SEO metadata={metadata} />
-      <Header background={true}  />
+      <Header shape={true} background={true}  />
       <SectionEvents queryType="all"  />
       <Footer/>
     </main>

@@ -23,7 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="main" >
       <SEO metadata={metadata} />
-      <Header shape={true} />
+      <Header  />
       <SectionBannerIndex/>
       <SectionAbout/>
       <SectionEvents queryType="byDate" date="2024/01/29" />

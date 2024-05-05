@@ -24,7 +24,7 @@ const SectionAbout: React.FC = () => {
                             
                             <div className="card__footer">
                                 <p>
-                                    Buscamos difundir el conocimiento de diversas profesiones en Tecnología. Y para que este proceso sea emocionante, motivante y cooperativo, creamos un espacio en nuestro servidor de Discord para conectar con otros profesionales con los mismos intereses.
+                                    Organizamos actividades tanto presenciales como virtuales para que conectes con otros profesionales con los mismos intereses. Estos pueden ser talleres, meetups, hackathons, grupos de estudio.
                                 </p>
                                 <a href="https://discord.gg/rgGqrCG7ST" className="btn btn-ghost">
                                     ¡Únete a la comunidad!                                   
@@ -44,7 +44,7 @@ const SectionAbout: React.FC = () => {
                             
                             <div className="card__footer">
                                 <p>
-                                    En ZonaTech Perú buscamos desarrollar las habilidades de jóvenes peruanos en diversas especialidades de la Tecnología, por ello contamos con diversas iniciativas como talleres, charlas, grupos de estudio, hackathons y programas de entrenamiento.
+                                    Realizamos programas de entrenamiento para que especialices como Frontend, Backend, Mobile o Analista QA. Estos van desde un entrenamiento teórico / práctico con mentores hasta realizar proyecto de impacto real.
                                 </p>
                                 <a href="/eventos" className="btn btn-ghost">
                                     Conocer iniciativas               

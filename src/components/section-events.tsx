@@ -61,7 +61,7 @@ const SectionEvents: React.FC= ({ queryType, date }: SectionEventsProps) => {
   
     return (
       <section className="section section--events">
-        <div className="content content--events">
+        <div className="content-section content--events">
           <div className="text--content">
             <h1 className="title">Próximos eventos</h1>
             <p>Conecta y comparte con la comunidad en</p>

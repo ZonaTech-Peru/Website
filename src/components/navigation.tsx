@@ -15,6 +15,11 @@ const data = [
   },
   {
     id: 3,
+    text: "Blog",
+    url: "https://blog.zonatech.org.pe/",
+  },
+  {
+    id: 4,
     text: "Unete a discord",
     url: "https://discord.gg/rgGqrCG7ST",
     Icon: <Discord/>

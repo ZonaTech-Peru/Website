@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const SectionAbout: React.FC = () => {
   return (
     <section className="section section--about" id="about">
-            <div className="content content--about">
+            <div className="content-section content--about">
                 <div className="text--content">
                     <h1 className="title">Sé parte de nuestra comunidad</h1>
                     <p>Capacítate junto a otros peruanos apasionados por la tecnología</p>

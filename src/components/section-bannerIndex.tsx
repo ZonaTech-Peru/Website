@@ -9,18 +9,20 @@ const SectionBannerIndex: React.FC = () => {
     <div className="content-section content--banner">
         <div className="banner-text">
             <h1 className="tittle-banner">
-                <span>Compartimos</span>  en comunidad
+                <span>Aprende</span> y <span>conecta</span> con otros apasionados por la tecnología
             </h1>
-            <p>Aprende y conecta con otros apasionados por la tecnología</p>
             <a className="btn btn-ghost items-center" href="#events">Conoce nuestros eventos 
                 <ArrowDown/>
             </a>
         </div>
         <div className="banner-image">
         <StaticImage className='img'
-                src="../images/banner-index.png"
+                src="../images/banner.jpg"
                 alt="Descripción de la imagen"
                 placeholder="blurred" 
+                // width={933}
+                height={555}
+                objectFit="cover"
                 />
         </div>
     </div>

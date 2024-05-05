@@ -18,10 +18,10 @@ export const Header: React.FC<propsHeader>  = ({shape = false, background= false
     <header>
             <nav className={background? `navigation standar`: `navigation`}>
                 {
-                    shape ? <div className="shape"></div>: ""
+                    // shape ? <div className="shape"></div>: ""
                 }
                 <Link className="navigation-logo" to="/">
-                    <Logo className="object-contain h-full"/>
+                    <Logo className="object-contain h-full w-56"/>
                 </Link>
                 <Navigation iconState={iconState}></Navigation>
                 <div className={iconState?`menu-icon`:`menu-icon active`} onClick={()=>{setIconState(!iconState) }} >

@@ -20,9 +20,9 @@ const SectionBannerIndex: React.FC = () => {
                 src="../images/banner.jpg"
                 alt="Descripción de la imagen"
                 placeholder="blurred" 
-                // width={933}
-                height={555}
-                objectFit="cover"
+                // width={1000}
+                // height={555}
+
                 />
         </div>
     </div>

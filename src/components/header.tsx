@@ -15,7 +15,7 @@ export const Header: React.FC<propsHeader>  = ({shape = false, background= false
     const [iconState, setIconState]= useState<boolean>(true) 
 
   return (
-    <header>
+    <header className='header'>
                 {
                     shape ? <div className="shape"></div> : "" 
                 }

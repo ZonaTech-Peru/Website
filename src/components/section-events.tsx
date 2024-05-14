@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import CalendarIcon from '../images/svg/calender.svg';
 import ClockIcon from '../images/svg/clock.svg';
 import ArrowRightIcon from '../images/svg/arrow-right.svg';
+import { Url } from 'url';
 
 interface SectionEventsProps {
   queryType: 'all' | 'byDate';
@@ -17,6 +18,11 @@ interface Event {
   link: string;
   content: { rendered: string; };
   tipo_de_evento: { id: number; name: string; }[];
+  acf:{
+    inicio:string;
+    fin:string;
+    url_de_stream:string
+  }
 }
 
 const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
@@ -83,7 +89,7 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                     <ul className="list">
                       <li className="list-item">
                         <CalendarIcon />
-                        {new Date(event.date).toLocaleDateString('es-PE', {
+                        {new Date(event.acf.inicio.replace(" ", "T")).toLocaleDateString('es-PE', {
                           weekday: 'long',
                           year: 'numeric',
                           month: 'long',
@@ -91,11 +97,12 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                         })}
                       </li>
                       <li className="list-item">
-                        <ClockIcon />
-                        {new Date(event.date).toLocaleTimeString('es-PE', {
+                        <CalendarIcon />
+                        {new Date(event.acf.inicio).toLocaleTimeString('es-PE', {
                           hour: 'numeric',
                           minute: 'numeric',
-                          timeZoneName: 'short',
+                          timeZone: 'America/Lima', // Especifica la zona horaria de Perú
+                          timeZoneName: 'short'
                         })}
                       </li>
                     </ul>

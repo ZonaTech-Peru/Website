@@ -22,7 +22,8 @@ interface Event {
     inicio:string;
     fin:string;
     url_de_stream:string
-  }
+  };
+  imagen_destacada_url:string;
 }
 
 const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
@@ -61,6 +62,8 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
     events: events.filter(event => event['tipo-de-evento'] && event['tipo-de-evento'].some(t => t.id === type.id))
   }));
 
+  const placeholderUrl = 'https://placehold.co/1200x720'; 
+
   return (
     <section className="section section--events">
       <div className="content-section content--events">
@@ -75,9 +78,10 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                 <div className="card__content">
                   <div className="card__header">
                     <h2 className="title">{event['tipo-de-evento'][0]?.name || 'Tipo de Evento Desconocido'}</h2>
-                    <StaticImage
+                    <img
                       className="img"
-                      src="../images/charla1.png"
+                      src={event['imagen_destacada_url'] ? event['imagen_destacada_url'] : placeholderUrl}
+
                       alt="Event Image"
                       placeholder="blurred"
                     />
@@ -106,7 +110,7 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                         })}
                       </li>
                     </ul>
-                    <a href={event.link} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                    <a href={event.acf.url_de_stream} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">
                       Ver evento
                       <ArrowRightIcon />
                     </a>

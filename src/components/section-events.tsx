@@ -1,68 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import CalendarIcon from '../images/svg/calender.svg';
 import ClockIcon from '../images/svg/clock.svg';
 import ArrowRightIcon from '../images/svg/arrow-right.svg';
-import { Url } from 'url';
 
 interface SectionEventsProps {
   queryType: 'all' | 'byDate';
   date?: string;
 }
 
-interface Event {
-  id: number;
-  date: string;
-  slug: string;
-  title: { rendered: string; };
-  link: string;
-  content: { rendered: string; };
-  tipo_de_evento: { id: number; name: string; }[];
-  acf:{
-    inicio:string;
-    fin:string;
-    url_de_stream:string
-  };
-  imagen_destacada_url:string;
-}
-
 const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
-  const [eventTypes, setEventTypes] = useState<any[]>([]);
   const [events, setEvents] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchEventTypes = async () => {
-      const response = await fetch('https://blog.zonatech.org.pe/wp-json/wp/v2/tipo-de-evento');
-      const data = await response.json();
-      setEventTypes(data);
-    };
-
     const fetchEvents = async () => {
       try {
-        const rest = "https://blog.zonatech.org.pe/wp-json/wp/v2/zonatech_evento";
-        let apiUrl = queryType === 'all' ? `${rest}?order=desc` : `${rest}?filter_day=${date}`;
+        let apiUrl = "https://blog.zonatech.org.pe/wp-json/wp/v2/zonatech_evento";
         if (queryType === 'byDate' && !date) throw new Error('Fecha requerida para la consulta por fecha.');
-
+        if (queryType === 'byDate') apiUrl += `?filter_day=${date}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log(data);
-        
-        setEvents(data);
+        const dataOrdered = data.sort((a, b) => new Date(b.acf.inicio) - new Date(a.acf.inicio));
+        setEvents(dataOrdered);
       } catch (error) {
         console.error('Error al obtener eventos:', error);
       }
     };
 
-    fetchEventTypes();
     fetchEvents();
   }, [queryType, date]);
 
-  const groupedEvents = eventTypes.map(type => ({
-    ...type,
-    events: events.filter(event => event['tipo-de-evento'] && event['tipo-de-evento'].some(t => t.id === type.id))
-  }));
-
-  const placeholderUrl = 'https://placehold.co/1200x720'; 
+  const placeholderUrl = 'https://placehold.co/1200x720';
 
   return (
     <section className="section section--events">
@@ -72,8 +39,8 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
           <p>Conecta y comparte con la comunidad</p>
         </div>
         <div className="events--cards">
-          {groupedEvents.map((type) => (
-            type.events.length > 0 ? type.events.map(event => (
+          {events.length > 0
+            ? events.map(event => (
               <article key={event.id} className="card">
                 <div className="card__content">
                   <div className="card__header">
@@ -101,12 +68,11 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                         })}
                       </li>
                       <li className="list-item">
-                        <CalendarIcon />
+                        <ClockIcon />
                         {new Date(event.acf.inicio).toLocaleTimeString('es-PE', {
                           hour: 'numeric',
                           minute: 'numeric',
-                          timeZone: 'America/Lima', // Especifica la zona horaria de Perú
-                          timeZoneName: 'short'
+                          timeZone: 'America/Lima'
                         })}
                       </li>
                     </ul>
@@ -117,19 +83,17 @@ const SectionEvents: React.FC<SectionEventsProps> = ({ queryType, date }) => {
                   </div>
                 </div>
               </article>
-            )) : (
-              <article key={type.id} className="card">
+            ))
+            : (
+              <article className="card">
                 <div className="card__content">
-                  <div className="card__header">
-                    <h2 className="title">{type.name}</h2>                    
-                  </div>
                   <div className="card__body">
-                    <p>Actualmente no hay eventos para este tipo.</p>
+                    <p className='text-center'>Actualmente no hay próximos eventos.</p>
                   </div>
                 </div>
               </article>
             )
-          ))}
+          }
         </div>
         {queryType !== "all" && <a className="btn btn-solid" href="/eventos">Ver todos</a>}
       </div>

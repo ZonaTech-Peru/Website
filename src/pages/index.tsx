@@ -26,7 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header  />
       <SectionBannerIndex/>
       <SectionAbout/>
-      <SectionEvents queryType="byDate" date="2024/01/29" />
+      <SectionEvents queryType="byDate" date={new Date().toISOString().split('T')[0].replaceAll('-','/')} />
       <Footer />
     </main>
   )

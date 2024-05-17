@@ -12,7 +12,7 @@ import SectionEvents from "../components/section-events";
 import SectionAbout from "../components/section-about";
 
 const metadata = {
-  title: "Somos una ONG que ayuda a fortalecer habilidades en Desarrollo de Software | ZonaTech Perú",
+  title: "Desarrolla tus habilidades en tecnología con ZonaTech Perú",
   description: "Descubre ZonaTech Perú, una ONG dedicada a democratizar el conocimiento en Desarrollo de Software en todo el Perú. Únete a nuestra comunidad de apasionados por la tecnología y accede a programas de formación, eventos educativos y oportunidades de colaboración. ¡Impulsa tu carrera en tecnología con ZonaTech!",
   siteUrl: "https://zonatech.pe/",
   author: "ZonaTech Perú",

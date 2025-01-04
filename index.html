@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZonaTech Perú</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container logo">
+        <img src="./assets/logo-blanco.png" alt="Logo de ZonaTech Perú">
+    </div>
+
+    <section class="container countdown--container">
+        <div class="countdown--content">
+            <h1 class="countdown__title">¡Estamos trabajando duro para ti!</h1>
+            <p>Muy pronto tendrás acceso a una experiencia que te encantará.</p>
+            <div class="countdown">
+                <div class="countdown__time">
+                    <div id="day"></div>
+                    <span>Days</span>
+                </div>
+                <div class="countdown__time">
+                    <div id="hour"></div>
+                    <span>Hours</span>
+                </div>
+                <div class="countdown__time">
+                    <div id="minute"></div>
+                    <span>Minutes</span>
+                </div>
+                <div class="countdown__time">
+                    <div id="second"></div>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <a href="" class="btn btn--newsletter" id="notify">¡Avísame cuando esté listo!</a>
+        </div>
+
+        <div class="countdown--image">
+            <img src="./assets/man.png" alt="Imagen de un hombre construyendo algo">
+        </div>
+    </section>
+
+    <footer class="container socialmedia">
+        <a class="socialmedia__link" href="https://www.linkedin.com/company/zonatechorgpe/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="socialmedia__link" href="https://www.tiktok.com/@zonatechorgpe" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </footer>
+
+    <div class="newsletter">
+        <h2>¡Mantente al tanto!</h2>
+        <p>Déjanos tu correo y te avisaremos cuando esté listo.</p>
+        <div class="inputBox">
+            <form action="">
+                <input type="email" name="" id="" placeholder="Escribe tu email aquí" required>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <img class="btn--close" src="./assets/close.png" alt="Icono para cerrar popup newsletter" id="closeNewsletter">
+    </div>
+
+    <script src="https://kit.fontawesome.com/79e560cc16.js" crossorigin="anonymous"></script>
+    <script src="./js/newsletter.js"></script>
+    <script src="./js/countdown.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

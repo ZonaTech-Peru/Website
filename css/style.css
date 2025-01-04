@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #072323;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 2rem auto;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo img {
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.countdown--container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.countdown--content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    max-width: 550px;
+}
+
+.countdown--image {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.countdown--image img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.countdown__title {
+    font-size: calc(1.5rem + 2vw); 
+}
+
+.countdown__time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 10px 5px;
+    border-radius: 4px;
+    color: #ff0083;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+    max-width: 100px;
+}
+
+.countdown__time span {
+    color: #312747;
+    font-size: 1rem;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 1rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.btn--newsletter {
+    background: #ff0083;
+    transition: transform 0.5s;
+}
+
+.btn--newsletter:hover,
+.btn--newsletter:focus {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 20px;
+}
+
+.socialmedia .socialmedia__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.5s;
+}
+
+.socialmedia .socialmedia__link:hover,
+.socialmedia .socialmedia__link:focus {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.newsletter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 60px;
+    background-color: #fff;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(7, 35, 35, .9);
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.newsletter.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.newsletter h2 {
+    font-size: 48px;
+    color: #312747;
+}
+
+.newsletter p {
+    font-size: 20px;
+    color: #312747;
+}
+
+.newsletter .inputBox {
+    margin-top: 20px;
+}
+
+.newsletter .inputBox input {
+    padding: 10px;
+    outline: none;
+    width: 300px;
+    font-size: 18px;
+    border: 1px solid #999;
+}
+
+.newsletter .inputBox input[type="submit"] {
+    padding: 10px;
+    outline: none;
+    width: 140px;
+    color: #fff;
+    background-color: #ff0083;
+    border: 1px solid #ff0083;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.newsletter .btn--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media (min-width: 1032px) {
+    .countdown--container {
+        justify-content: start;
+    }
+    .countdown__title {
+        text-align: start;
+    }
+    .countdown--content {
+        align-items: start;
+    }
+    .countdown {
+        justify-content: start;
+    }
+}

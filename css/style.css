@@ -225,10 +225,17 @@ ul {
   justify-content: space-between;
   gap: 2rem;
   background-color: #fff;
+  flex-wrap: wrap;
 }
 
 .benefits__image {
   flex: 1;
+  text-align: center;
+}
+
+.benefits__image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .benefits__content {
@@ -244,12 +251,14 @@ ul {
 
 .benefits__list {
   margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .benefits__item {
   margin: 0.5rem 0;
   color: #555;
   position: relative;
+  padding-left: 1.5rem;
 }
 
 .benefits__item::before {
@@ -261,7 +270,7 @@ ul {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  left: -4%;
+  left: 0;
 }
 
 /* =========================
@@ -687,7 +696,6 @@ ul {
   /* Benefits */
   .benefits {
     flex-direction: column;
-    text-align: center;
   }
 
   /* Process media */

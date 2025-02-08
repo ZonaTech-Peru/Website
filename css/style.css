@@ -500,6 +500,20 @@ ul {
   font-style: italic;
 }
 
+@media (max-width: 768px) {
+  .testimonials__cards {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .testimonial {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+}
+
 /* =========================
    CTA / FAQ SECTION (BEM: .faq)
 ========================== */

@@ -1,70 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZonaTech Perú</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <title>ZonaTech Perú - Impulsando el talento en tecnología</title>
+  <meta name="keywords"
+    content="ZonaTech Perú, ONG tecnología, formación en tecnología, capacitación en software, mentorías tech, comunidad tecnológica, desarrollo de software, educación gratuita">
+  <meta name="author" content="ZonaTech Perú">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="https://zonatech.org.pe/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="ZonaTech Perú - Impulsando el talento en tecnología">
+  <meta property="og:description"
+    content="Somos una ONG que capacita a jóvenes en tecnología, brindándoles acceso a formación gratuita y oportunidades en el sector tech.">
+  <meta property="og:image" content="https://zonatech.org.pe/assets/summary.png">
+  <meta property="og:url" content="https://zonatech.org.pe">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZonaTech Perú - Impulsando el talento en tecnología">
+  <meta name="twitter:description"
+    content="Capacitación gratuita en tecnología para jóvenes con mentorías, cursos y oportunidades en el mundo digital.">
+  <meta name="twitter:image" content="https://zonatech.org.pe/assets/summary.png">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <div class="container logo">
-        <img src="./assets/logo-blanco.png" alt="Logo de ZonaTech Perú">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <!-- LOGO -->
+      <a href="#" class="header__logo">
+        <img src="./assets/logo.png" alt="Logo ZonaTech" class="header__logo-img" />
+        <span>ZonaTech Perú</span>
+      </a>
+
+      <!-- Toggle checkbox para menú responsive -->
+      <input type="checkbox" id="menu-toggle" class="header__toggle" />
+
+      <!-- Ícono “hamburguesa” -->
+      <label for="menu-toggle" class="header__menu-icon">&#9776;</label>
+
+      <!-- NAV -->
+      <nav class="header__nav">
+        <a href="#specialties" class="header__link">Especialidades</a>
+        <a href="#benefits" class="header__link">Beneficios</a>
+        <a href="#process" class="header__link">Nuestro proceso</a>
+        <a href="#faq" class="header__link">Contacto</a>
+      </nav>
+
+      <!-- Botón Inscribirse -->
+      <a href="https://techxpert.zonatech.org.pe/register" target="_blank" class="header__btn">Inscribirse</a>
     </div>
+  </header>
 
-    <section class="container countdown--container">
-        <div class="countdown--content">
-            <h1 class="countdown__title">¡Estamos trabajando duro para ti!</h1>
-            <p>Muy pronto tendrás acceso a una experiencia que te encantará.</p>
-            <div class="countdown">
-                <div class="countdown__time">
-                    <div id="day"></div>
-                    <span>Days</span>
-                </div>
-                <div class="countdown__time">
-                    <div id="hour"></div>
-                    <span>Hours</span>
-                </div>
-                <div class="countdown__time">
-                    <div id="minute"></div>
-                    <span>Minutes</span>
-                </div>
-                <div class="countdown__time">
-                    <div id="second"></div>
-                    <span>Seconds</span>
-                </div>
-            </div>
-            <a href="" class="btn btn--newsletter" id="notify">¡Avísame cuando esté listo!</a>
-        </div>
-
-        <div class="countdown--image">
-            <img src="./assets/man.png" alt="Imagen de un hombre construyendo algo">
-        </div>
-    </section>
-
-    <footer class="container socialmedia">
-        <a class="socialmedia__link" href="https://www.linkedin.com/company/zonatechorgpe/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a class="socialmedia__link" href="https://www.tiktok.com/@zonatechorgpe" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
-    </footer>
-
-    <div class="newsletter">
-        <h2>¡Mantente al tanto!</h2>
-        <p>Déjanos tu correo y te avisaremos cuando esté listo.</p>
-        <div class="inputBox">
-            <form action="https://formspree.io/f/meoopldp" method="POST">
-                <input type="email" name="email" id="email" placeholder="Escribe tu email aquí" required>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-        <img class="btn--close" src="./assets/close.png" alt="Icono para cerrar popup newsletter" id="closeNewsletter">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Empoderando a la Próxima Generación de Desarrolladores de Software</h1>
+      <p class="hero__subtitle">
+        Sigue nuestros roadmap personalizados y obtén certificaciones
+        que validen tu conocimiento en el sector tecnológico.
+      </p>
+      <a href="https://techxpert.zonatech.org.pe/login" target="_blank" class="hero__cta">Únete Gratis</a>
     </div>
+    <div class="hero__image">
+      <img src="./assets/hero1.png" alt="Hero Image" />
+    </div>
+  </section>
 
-    <script src="https://kit.fontawesome.com/79e560cc16.js" crossorigin="anonymous"></script>
-    <script src="./js/newsletter.js"></script>
-    <script src="./js/countdown.js"></script>
-    <script src="./js/main.js"></script>
+  <!-- SPECIALTIES SECTION -->
+  <section id="specialties" class="specialties">
+    <h2 class="specialties__title">¿En qué te quieres especializar?</h2>
+    <div class="specialties__grid">
+      <div class="specialty">
+        <div class="specialty__icon">
+          <img src="./assets/desarrollo_backen.png" alt="">
+        </div>
+        <h3 class="specialty__name">Desarrollo Backend</h3>
+      </div>
+      <div class="specialty">
+        <div class="specialty__icon">
+          <img src="./assets/desarrollo movil.png" alt="">
+        </div>
+        <h3 class="specialty__name">Desarrollo Móvil</h3>
+      </div>
+      <div class="specialty">
+        <div class="specialty__icon">
+          <img src="./assets/ingenieria QA.png" alt="">
+        </div>
+        <h3 class="specialty__name">Ingeniería QA</h3>
+      </div>
+      <div class="specialty">
+        <div class="specialty__icon">
+          <img src="./assets/desarrollo frontend.png" alt="">
+        </div>
+        <h3 class="specialty__name">Desarrollo Frontend</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section id="benefits" class="benefits">
+    <div class="benefits__image">
+      <img src="./assets/hero2.png" alt="Benefits Image" />
+    </div>
+    <div class="benefits__content">
+      <h2 class="benefits__title">¿Qué obtendrás al certificarte con nosotros?</h2>
+      <ul class="benefits__list">
+        <li class="benefits__item">Incrementa tus oportunidades laborales en el sector tecnológico.</li>
+        <li class="benefits__item">Certificación para validar tu experiencia y conocimientos.</li>
+        <li class="benefits__item">Acceso al soporte de la comunidad de ZonaTech.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REASONS SECTION (¿Por qué elegir nuestra plataforma?) -->
+  <section class="reasons">
+    <h2 class="reasons__title">¿Por qué elegir nuestra plataforma?</h2>
+    <div class="reasons__cards">
+      <div class="reason-card">
+        <div class="reason_header">
+          <img src="./assets/certificado_expertos.png" alt="">
+        </div>
+        <h3 class="reason-card__title">Certificadores expertos</h3>
+        <p class="reason-card__text">
+          Nuestros instructores son líderes en la industria,
+          con experiencia práctica.
+        </p>
+      </div>
+      <div class="reason-card">
+        <div class="reason_header">
+          <img src="./assets/proceso_flexible.png" alt="">
+        </div>
+        <h3 class="reason-card__title">Proceso flexible</h3>
+        <p class="reason-card__text">
+          Avanza a tu ritmo con módulos y evaluaciones en vivo.
+        </p>
+      </div>
+      <div class="reason-card">
+        <div class="reason_header">
+          <img src="./assets/costo_flexible.png" alt="">
+        </div>
+        <h3 class="reason-card__title">Costo accesible</h3>
+        <p class="reason-card__text">
+          Ofrecemos planes a tu medida con opciones de financiamiento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION (¿Cómo es el proceso de certificación?) -->
+  <section id="process" class="process">
+    <h2 class="process__title">¿Cómo es el proceso de certificación?</h2>
+    <p class="process__subtitle">
+      Estudia nuestros módulos con recursos seleccionados y validados por expertos.
+      Aprueba la evaluación para completar cada módulo.
+      Certifícate al completar todos los modulos del roadmap.
+    </p>
+    <a href="https://techxpert.zonatech.org.pe/login" target="_blank" class="process__btn">Solicita tu roadmap</a>
+    <div class="process__media-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VvAXL3DVb9A?si=iWEJD4Gj4OrrCNmA"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="process__media">
+      <div class="process__image-wrapper">
+        <img src="./assets/clock.png" alt="Proceso de certificación" />
+        <p>Evaluaciones en vivo</p>
+      </div>
+      <!-- Podrías colocar otra imagen o un icono de videollamada aquí -->
+      <div class="process__image-wrapper">
+        <img src="./assets/person_group.png" alt="Evaluaciones en vivo" />
+        <p>Mentorías personalizadas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION (¿Qué dicen nuestros certificados?) -->
+  <section class="testimonials">
+    <h2 class="testimonials__title">¿Qué dicen nuestros certificados?</h2>
+    <div class="testimonials__cards">
+      <div class="testimonial">
+        <img src="./assets/frack.png" alt="">
+        <span class="testimonial__name">Frack Shanto</span>
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">
+          “Logré mis metas en desarrollo backend más rápido de lo que creí.
+          ¡La mejor decisión para mi carrera!”
+        </p>
+      </div>
+      <div class="testimonial">
+        <img src="./assets/aldair.png" alt="">
+        <span class="testimonial__name">Adair Dominguez</span>
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">
+          “La certificación me ayudó a mejorar mis habilidades y conseguir un
+          mejor puesto en mi empresa.”
+        </p>
+      </div>
+      <div class="testimonial">
+        <img src="./assets/jeyson.png" alt="">
+        <span class="testimonial__name">Jheyson Atahuaman</span>
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__text">
+          “El material es muy completo, el ritmo de estudio es flexible y los
+          mentores siempre están ahí para ayudarte.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / CTA SECTION (¿Tienes alguna duda?) -->
+  <section id="faq" class="faq">
+    <h2 class="faq__title">¿Tienes alguna duda?</h2>
+    <p class="faq__subtitle">
+      Déjanos tus datos y te contactaremos para responder cualquier pregunta sobre nuestras certificaciones y roadmaps.
+    </p>
+    <div class="faq__actions">
+      <a href="https://wa.me/51967319742?text=Hola!%20Quiero%20unirme%20a%20la%20comunidad" target="_blank"
+        class="faq__btn">Contactar</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ZonaTech Perú</h3>
+
+        <div class="footer__social">
+          <!-- Iconos de redes sociales (ej. FontAwesome) -->
+          <a href="https://www.tiktok.com/@zonatechorgpe" target="_blank" class="footer__social-icon">
+            <img src="./assets/tiktok-icon.svg" alt="">
+          </a>
+          <a href="https://www.linkedin.com/company/zonatechorgpe" target="_blank" class="footer__social-icon">
+            <img src="./assets/linkedin-icon.svg" alt="">
+          </a>
+        </div>
+        <p class="footer__copy">
+          ©<span id="footer-year"></span> Zona Tech Perú. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <div class="footer__column">
+        <h3 class="footer__title">Comunidad</h3>
+        <a href="https://chat.whatsapp.com/BSZJIDk6Dtv7yI8jf7fkMB" target="_blank" class="footer__link">Whatsapp</a>
+      </div>
+
+      <div class="footer__column">
+        <h3 class="footer__title">Enlaces rápidos</h3>
+        <a href="#" class="footer__link">Inicio</a>
+        <a href="#specialties" class="footer__link">Especialidades</a>
+        <a href="#benefits" class="footer__link">Beneficios</a>
+        <a href="#process" class="footer__link">Nuestro proceso</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/copyright.js"></script>
+  <script src="./js/carousel.js"></script>
 </body>
+
 </html>
